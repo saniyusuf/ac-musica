@@ -1,0 +1,36 @@
+<!--
+  Generated template for the PreviewPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Preview</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-card>
+  <ion-card-content>
+     <ion-row>
+          <ion-col>
+              <ion-icon primary name="pause" (click)="pause()"></ion-icon>
+          </ion-col>
+        
+         <ion-col>
+              <ion-icon primary name="play" (click)="play()"></ion-icon>
+          </ion-col>
+          
+          <ion-col>
+              <ion-icon primary name="square" (click)="stop()"></ion-icon>
+          </ion-col>
+      </ion-row>
+  </ion-card-content>
+</ion-card>
+
+</ion-content>

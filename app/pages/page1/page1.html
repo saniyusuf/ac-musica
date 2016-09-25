@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Tracks</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="page1">
+  <div>
+    <ion-card *ngFor="let track of tracks">
+      <img [src]="track.album.images[0].url"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{track.name}}
+        </ion-card-title>
+        <ion-row>
+          <ion-col (click)="goToPreview(track.preview_url)">
+              <ion-icon primary name="musical-notes"></ion-icon>
+              <span primary>Listen</span>
+          </ion-col>
+        
+          <ion-col style="text-align: right;" (click)="shareTrack(track)">
+              <ion-icon primary name="share-alt"></ion-icon>
+              <span primary>Share</span>
+          </ion-col>
+      </ion-row>
+      </ion-card-content>      
+    </ion-card>
+  </div>
+
+</ion-content>

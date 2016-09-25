@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Friends</ion-title>
+  </ion-navbar>
+
+   <ion-toolbar no-border>
+      <ion-searchbar (ionInput)="searchFriends($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-list *ngFor="let friend of friends" style="margin: 0;">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img [src]="friend.picture.thumbnail">
+        </ion-thumbnail>
+        <h2 style="text-transform:capitalize;">{{friend.name.first}} &nbsp; {{friend.name.last}}</h2>
+        <p>{{friend.email}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
